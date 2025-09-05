@@ -14,6 +14,11 @@ const displayLevelWord = (words) => {
     const wordContainer = document.getElementById("word-container");
     wordContainer.innerHTML = "";
 
+    if (words.length == 0) {
+        alert("no word detected");
+        return;
+    }
+
     //     {
     //     "id": 79,
     //     "level": 1,
@@ -60,4 +65,5 @@ const displayLessons = (lessons) => {
         levelContainer.append(btnDiv);
     }
 };
+
 loadLessons();
